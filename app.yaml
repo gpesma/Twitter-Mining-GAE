@@ -11,3 +11,9 @@ handlers:
 libraries:
 - name: webapp2
   version: "2.5.2"
+- name: jinja2
+  version: "2.6"
+- name: markupsafe
+  version: "0.23"
+- name: numpy
+  version: "1.6.1"
