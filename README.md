@@ -38,4 +38,6 @@ Install dependencies contaned under 'lib'of App Engine with pip.
 App engine contains a simlpe get endpoint, and serves a static html,to deploy:
 gcloud app deploy
 
+Also run: gcloud app deploy index.yaml
+
 File words.txt contains words that signify 'actions' found in disaster tweets
