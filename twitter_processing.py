@@ -1,7 +1,40 @@
 import json
-import pandas as pd
-import matplotlib.pyplot as plt
 import re
+from nltk.tokenize import word_tokenize
+#from google.appengine.ext import ndb
+from datetime import date, timedelta
+c
+emoticons_str = r"""
+    (?:
+        [:=;] # Eyes
+        [oO\-]? # Nose (optional)
+        [D\)\]\(\]/\\OpP] # Mouth
+    )"""
+ 
+regex_str = [
+    emoticons_str,
+    r'<[^>]+>', # HTML tags
+    r'(?:@[\w_]+)', # @-mentions
+    r"(?:\#+[\w_]+[\w\'_\-]*[\w_]+)", # hash-tags
+    r'http[s]?://(?:[a-z]|[0-9]|[$-_@.&amp;+]|[!*\(\),]|(?:%[0-9a-f][0-9a-f]))+', # URLs
+ 
+    r'(?:(?:\d+,?)+(?:\.?\d+)?)', # numbers
+    r"(?:[a-z][a-z'\-_]+[a-z])", # words with - and '
+    r'(?:[\w_]+)', # other words
+    r'(?:\S)' # anything else
+]
+
+emoticon_re = re.compile(r'^'+emoticons_str+'$', re.VERBOSE | re.IGNORECASE)
+ 
+def tokenize(s):
+    return tokens_re.findall(s)
+ 
+def preprocess(s, lowercase=False):
+    tokens = tokenize(s)
+    if lowercase:
+        tokens = [token if emoticon_re.search(token) else token.lower() for token in tokens]
+    return tokens
+# ['RT', '@', 'marcobonzanini', ':', 'just', 'an', 'example', '!', ':', 'D', 'http', ':', '//example.com', '#', 'NLP']
 
 def word_in_text(word, text):
     word = word.lower()
@@ -22,6 +55,7 @@ def do_stuff():
 	tweets_data_path = 'twitter_data.txt'
 
 	tweets_data = []
+    #urls_data = []
 	tweets_file = open(tweets_data_path, "r")
 	for line in tweets_file:
 	    try:
@@ -31,18 +65,20 @@ def do_stuff():
 	        continue
 	print len(tweets_data)
 
-	tweets = pd.DataFrame()
+	texts = []
 
-	tweets['text'] = map(lambda tweet: tweet['text'], tweets_data)
+	#make sure what this does
 
-	tweets['country'] = map(lambda tweet: tweet['place']['country'] if tweet['place'] != None else None, tweets_data)
-	tweets['fire'] = tweets['text'].apply(lambda tweet: word_in_text('fire', tweet))
-	tweets['tsunami'] = tweets['text'].apply(lambda tweet: word_in_text('tsunami', tweet))
-	tweets['relevant'] = tweets['text'].apply(lambda tweet: word_in_text('fire', tweet) or word_in_text('tsunami', tweet))
-	tweets['link'] = tweets['text'].apply(lambda tweet: extract_link(tweet))
-	tweets_relevant = tweets[tweets['relevant'] == True]
-	tweets_relevant_with_link = tweets_relevant[tweets_relevant['link'] != '']
+    texts = map(lambda tweet: tweet['text'], tweets_data)
 
-	print tweets_relevant_with_link[tweets_relevant_with_link['fire'] == True]['link']
-	return tweets_relevant_with_link[tweets_relevant_with_link['fire'] == True]['link']
+    for i in texts:
+        print i
 
+	fire = []
+	for i in range (0,len(texts)):
+		if(word_in_text('fire',texts[i])):
+			fire.append(extract_link(texts[i]))
+
+	print fire
+
+	return fire

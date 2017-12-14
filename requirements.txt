@@ -1,0 +1,5 @@
+Flask==0.12.2
+tweepy==3.5.0
+google-api-python-client
+PyCrypto >= 2.6
+AppEngine SDK >= 1.7.3

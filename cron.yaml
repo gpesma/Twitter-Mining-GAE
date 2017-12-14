@@ -1,0 +1,7 @@
+cron:
+- description: keeps top data
+  url: /best
+  schedule: every 2 hours
+- description: daily summary job
+  url: /task
+  schedule: every 1 hours

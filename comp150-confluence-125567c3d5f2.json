@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "comp150-confluence",
+  "private_key_id": "125567c3d5f2f4c49b8923ea02ca8e9cbb799788",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDee4Qd+LEvvybZ\ny4zUCereOoHt/58MVxhhS8FNp1pjjW6W6bICdq+z4F+e0oTzVmBCTMWMfhVUOR6S\n0XJa47nYnTBLxX21Eg215y0Tj0jg5BtbuIHLSMl5AkuICqvziuk4Fi/8ZYb7eLW8\nkw+PNuLeiBiv9Pua/L4ARa1abXB9GOYO7Q7dLE1vxV+3K1zt/ujXy0s8bvvXU73/\nZWPruj5C9ohoMNq9SBe5SMKHbnVn+i4iD638bONZ2EUIG6aUFsx8d/wm8x5k6AbY\n9PpwEtHhMh9uWtGD5pVJYNDypi83Bgp0at95t6SbpCOlK2HeJwCxjDni3zjIEUAS\netypecsPAgMBAAECggEAAgYiCI4q00iSfbUiJD4Tp4JLjLLtOBTrjg8JxIwUmjoL\nwU6Bv3X9WTSRI7lXwXyN4AYhkfEGGD/aYFmMocXXYS1LTPuQWv8kDGPJZcrBTfjY\nd6tXbiL/+jYKiKoYMF0y8lishq5IKq3jCvXt7htnHieJmfT8YpRdoiEAJIXawFIr\n6r+rMwCDlSSq4a9vSWGK39ROEdfwxvw857KBppHbTzOxjX+hy6zzqvsVYMGe6Ne/\ngJxUsjP/UBv4HhCQpeedF5MZKB3vS1IP9tlMlM+Xl7S5jcNbJMfhfqbDDFy83+hy\npWzhLHEdTtHmaYkgVfSvVhSspdUEEEagQfY/25VCWQKBgQD8DzI+idAQsrgEgfw1\nu2dv82mLG2H8RxV5ui3UO8ylUIReI7AjK2dMkjK7E6KmfGRxsHKBQtp8GSba1WxN\naW7/3J6YkGoqCnkri4eJaHr/EL7KVniZRIRpKCOCT7+N2A70pFu9ZQUEBfi4YpoS\n13kKXZr0ubQI1cTczrTD+5Eo2wKBgQDh9fIkHIWi/mIbP95wyaMgtVR7nwc8T3w7\nMfnAhMWLcG00JZfzCVsbZBRqR6fiISXGmFSQBv43HZ6uoKiD/Ukp+l4vSEL1tBuE\n8rbEins5kTHITYKBsyKtO35b+thb4GpaI7xDF2hzcP8ira7R3iL5LTUO1zbpUOWJ\nDk/rwGhy3QKBgBk76DrMjzDsw3FoFfjHHy7c/ob3odKgxyydj/L8XZt7ORU3m22Z\n7ciDpmKGL7VdJK0hDgWUzMy5s+MalLIXSQ6CZro9UvOMgt7yJAqElDOu2HrnN0GY\n02y3oP5tv26S38RsI+cNEvh5JJJJBMW4Hp0EC/xODxEHXaMBaqVoLPsbAoGAHqwD\n8mLswPNG3ewNhcHZItd6YE117fncIyzlefyL1CGusSVpOtRKSa2MF+EiKM/XEN4c\nnHBWkaSzpYCpX0FCbTBPGJv2euO32JQZuxQRJf9PgqEC1hg63Mj2ngWu2Mndpd6z\n72d+Bi2QdGSfFl3Q4YIBccJE8ebJQZFvx9CWXQECgYEA5jGHK4JQWomAWCZ5bdpQ\ncAr/rd65XMHockeKdd55ltqvWHkw61+vDs7fhb/jtGTJqnLjbIi+2HL7b5MXinum\nkcqbtABJQfYX6NAWSLVlv3SXJDKMShhhYk9iUNZvtKmOvqtzgqznJGLccvK1ZGc1\niNBr2yAoMdLVTwyg3uI54Uc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "tweet-stream@comp150-confluence.iam.gserviceaccount.com",
+  "client_id": "116060820183795673923",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tweet-stream%40comp150-confluence.iam.gserviceaccount.com"
+}

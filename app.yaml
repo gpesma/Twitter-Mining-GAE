@@ -1,12 +1,20 @@
-application: comp150-confluence
-version: 1
+#application: comp150-confluence
+#version: 1
 runtime: python27
 api_version: 1
 threadsafe: yes
 
 handlers:
-- url: .*
-  script: main.application
+- url: /task
+  script: task.app
+- url: /best
+  script: best_data.app
+- url: /get_data
+  script: get_data.app
+- url: /
+  script: main.app
+
+
 
 libraries:
 - name: webapp2
@@ -17,3 +25,5 @@ libraries:
   version: "0.23"
 - name: numpy
   version: "1.6.1"
+- name: ssl
+  version: latest
